@@ -1,0 +1,55 @@
+/* Estilos globais */
+/* ============================================================ */
+
+
+/* Fonte */
+
+@import url('https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap');
+
+
+* {
+
+box-sizing: border-box;
+
+margin: 0;
+
+padding: 0;
+
+}
+
+/* Variáveis do Design System */
+
+:root {
+
+--cor-fundo: #191B32;
+--cor-texto: #F5F5F5;
+--amarelo-destaque: #FDF286;
+--laranja-destaque: #F15D3A;
+--cor-botao: #87BBA2;
+--cinza-detalhes: #D1E1CD;
+
+
+/* Arredondamento */
+
+--raio-borda: 10px;
+
+}
+
+
+
+html {
+
+scroll-behavior: smooth;
+
+}
+
+
+body {
+    
+font-family: "Moderustic", sans-serif;
+
+background-color: var(--cor-fundo);
+
+color: var(--cor-texto);
+} 
+
