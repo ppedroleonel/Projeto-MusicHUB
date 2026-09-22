@@ -1,0 +1,92 @@
+/* CONTEÚDO PRINCIPAL*/
+
+.conteudo-principal {
+    /* Mantém o mesmo alinhamento lateral do cabeçalho */
+    padding: 40px 120px; 
+    display: flex;
+    flex-direction: column;
+
+    gap: 50px; /* Espaço entre as diferentes seções de playlists */
+}
+
+.cabecalho-secao {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    margin-bottom: 30px;
+}
+
+.titulo-secao {
+    font-size: 1.5em;
+    font-weight: 500;
+
+    /* A linha amarela de destaque embaixo do texto */
+    border-bottom: 2px solid var(--amarelo-destaque);
+    padding-bottom: 8px;
+}
+
+/* BOTÕES ESPECÍFICOS DA PÁGINA */
+
+.botao-criar {
+    background: transparent;
+    border: 1px solid var(--cor-botao);
+
+    color: var(--cor-botao);
+    border-radius: var(--raio-borda);
+
+    padding: 8px 16px;
+
+    font-family: "Moderustic", sans-serif;
+    font-size: 1em;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    transition: background-color 0.2s ease;
+
+    cursor: pointer;
+}
+
+.botao-criar:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.icone-mais {
+    font-size: 3em; 
+    font-weight: 300;
+    line-height: 0;
+    
+    transform: translateY(-2px);
+}
+
+
+
+/*CARDS DE PLAYLIST */
+
+.grid-playlists {
+    display: grid;
+    /* Cria 5 colunas de tamanhos iguais */
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px; 
+}
+
+.card-playlist {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.card-playlist:hover {
+    transform: scale(1.04);
+}
+
+.card-playlist img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: var(--raio-borda); 
+}
