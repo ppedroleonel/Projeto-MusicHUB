@@ -53,3 +53,96 @@ background-color: var(--cor-fundo);
 color: var(--cor-texto);
 } 
 
+/* HEADER LOGADO*/
+
+a {
+    color: var(--cor-texto);
+    text-decoration: none;
+}
+
+.cabecalho {
+    background-color: var(--cor-fundo);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    height: 10vh; 
+    border-bottom: 1px solid var(--laranja-destaque); /* Linha sutil separando o header da pagina */
+}
+
+/* Agrupamentos para o space-between funcionar */
+.cabecalho-esquerda, .cabecalho-direita {
+    display: flex;
+    align-items: center;
+}
+
+/* Identidade Visual do Logo */
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.logo-music {
+    color: var(--laranja-destaque);
+}
+
+/* Linha vertical que separa o logo da navegação */
+.divisor {
+    height: 40px;
+    width: 2px;
+    background-color: var(--amarelo-destaque);
+    margin: 0 40px;
+}
+
+.navegacao {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.navegacao a {
+    text-transform: uppercase;
+    font-size: 1em; 
+    font-weight: 500;
+}
+
+
+/* Lado Direito: Perfil e Busca */
+.cabecalho-direita {
+}
+
+.botao-busca {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+}
+
+.botao-busca img {
+    width: 40px;
+    height: 40px;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Ocultar o botão menu no desktop (> 768px) */
+.botao-menu {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--cor-texto);
+    font-size: 1.5em;
+    cursor: pointer;
+}
