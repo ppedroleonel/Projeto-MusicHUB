@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - MusicHUB</title>
+
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="../styles/global.css">
+
+    <link rel="shortcut icon" href="../imgs/global/icone-camaleao.svg" type="image/x-icon">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="cabecalho-esquerda">
+        <a href="#">
+            <img src="../imgs/global/logo.svg" alt="Logo do MusicHUB">
+        </a>
+        
+        <span class="divisor"></span>
+        
+        <nav class="navegacao">
+            <a href="#">Home</a>
+            <a href="#" class="ativo">Playlists</a>
+            <a href="#">Estatísticas</a>
+        </nav>
+    </div>
+
+     <!-- Lado Direito -->
+    <div class="cabecalho-direita">
+        <span class="divisor"></span>
+
+        <div class="botoes">
+            <button class="btn-login">Login</button>
+            <button class="btn-cadastrar">Cadastrar-se</button>
+        </div>
+    </div>
+
+    <!-- RESPONSIVIDADE (mantido da aula) -->
+    <button class="botao-menu" id="menu">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+    </header>
+
+    <main class="conteudo">
+        <form>
+            <section class = "login">
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input required type="email" id="email" placeholder="joaosilva@gmail.com">
+                </div>
+
+                <div class="campo">
+                    <label for="senha">Senha</label>
+                    <div class="campo-senha">
+                        <input required type="password" id="senha" placeholder="********">
+                        <button type="button" id="mostrar-senha" class="botao-olho">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="#F15D3A" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-eye">
+                                <path
+                                    d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0">
+                                </path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="redefinir">
+                        <p>Esqueceu a senha?</p>
+                        <a>
+                            <span>Redefinir</span>
+                        </a>   
+                    </div>
+
+                </div>
+                <button class="btn-entrar">Entrar</button>
+                </section>
+        </form>
+    </main>
+
+    <script src="login.js"></script>
+</body>
+
+</html>
