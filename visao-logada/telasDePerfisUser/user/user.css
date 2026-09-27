@@ -1,0 +1,309 @@
+/* PERFIL USER */
+
+.perfil-user {
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.foto-de-perfil {
+    width: 180px;
+    height: 180px;
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+    margin-top: -100px;
+}
+
+.foto-de-perfil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info-perfil {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px 40px;
+}
+
+.info-esqueda {
+    display: flex;
+    gap: 20px;
+}
+
+.info-direta {
+    display: flex;
+    flex-direction: row; 
+    gap: 20px; 
+}
+
+.status {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.2em;
+}
+
+.status h5 {
+    color: #999999;
+} 
+
+.nomes {
+    font-size: 1.1em;
+}
+
+.nomes h3 {
+    color: #666666;
+}
+
+/* FAIXAS RECENTE */
+
+.faixas-recentes {
+    padding: 35px 70px 10px;
+}
+ 
+.faixas-recentes h1 {
+    font-size: 2.2em;
+}
+
+.lista-musica {
+    padding: 35px 150px;
+}
+
+.lista-musica span {
+    display: flex;
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff;
+}
+ 
+.musica {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 55px;
+    padding: 14px 110px 14px;
+}
+ 
+.musica-direta {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+ 
+.capa-musica {
+    width: 46px;
+    height: 46px;
+    object-fit: cover;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+ 
+.icone-favorito {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+ 
+.info-musica {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+ 
+.titulo-musica {
+    color: var(--cor-botao);
+    font-weight: bold;
+    font-size: 1em;
+}
+ 
+.artista-musica {
+    color: #ffffff;
+    font-size: 0.9em;
+}
+ 
+.musica-esqueda {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+ 
+.duracao-musica {
+    color: #ffffff;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+ 
+.icone-plataforma {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* favoritas */
+
+.favoritas {
+    padding: 0px 70px;
+    font-size: 1.2em;
+}
+
+.favoritas p {
+    color: var(--laranja-destaque);
+}
+
+.playlists {
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.playlists img {
+    height: 220px;
+}
+
+.artistas {
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.artistas img {
+    height: 220px;
+}
+
+/* AVALIAÇÕES */
+ 
+.avaliacoes {
+    padding: 35px 70px 60px;
+}
+ 
+.avaliacoes h1 {
+    font-size: 2.2em;
+}
+ 
+.avaliacoe {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px 0;
+}
+ 
+.avaliacoe > img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+ 
+.review {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    flex: 1;
+    justify-content: center;
+}
+ 
+.review-info {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+ 
+.review-info h1 {
+    font-size: 2.2em;
+}
+ 
+.review-info img {
+    width: 38px;
+    height: 38px;
+}
+ 
+.comentario p {
+    color: #ffffff;
+    font-size: 1.4em;
+    line-height: 1.6;
+    max-width: 950px;
+}
+ 
+.review .musica {
+    padding: 10px 0;
+    max-width: 600px;
+    min-height: auto;
+}
+
+/* footer */
+
+.rodape {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;  
+   padding: 30px;
+  border-top: 1px solid #2a2a3e;
+}
+
+/* Lado esquerdo */
+.rodape-esquerda {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+ .rodape-redes {
+  display: flex;
+  gap: 12px;
+} 
+
+ .rodape-redes img {
+  width: 40px;
+  height: 40px;
+} 
+
+    .rodape-copyright {
+      font-size: 1em;
+      color: #fff;
+    }
+
+/* Lado direito */
+.rodape-direita {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+} 
+
+.rodape-icones {
+  display: flex;
+  gap: 30px;
+} 
+
+ .rodape-icones img {
+  width: 32px;
+  height: 32px;
+} 
+
+.rodape-logo {
+  height: 24px;
+}
+
+.rodape-links {
+  display: flex;
+  gap: 8px;
+  font-size: 13px;
+  color: #ccc;
+}
+
+.rodape-links a:not(:last-child) {
+  padding-right: 8px;
+  border-right: 1px solid #555;
+}
