@@ -90,3 +90,87 @@
     object-fit: cover;
     border-radius: var(--raio-borda); 
 }
+
+/* FOOTER*/
+/* ========================== */
+
+.rodape {
+    width: 100%;
+
+    min-height: 148px;
+
+    box-sizing: border-box;
+
+    padding: 24px 30px 12px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.rodape-superior {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rodape-esquerda {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.rodape-direita {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.rodape-icones {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.rodape-icones a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rodape-icones img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.rodape-logo {
+    margin-top: 20px;
+}
+
+.rodape-logo img {
+    width: 115px;
+    height: auto;
+}
+
+.rodape-inferior {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rodape-inferior p {
+    margin: 0;
+}
+
+.rodape-links {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.rodape-links a {
+    text-decoration: none;
+}
+
+
