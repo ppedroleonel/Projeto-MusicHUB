@@ -1,0 +1,227 @@
+/* ============================================================ */
+/* CABEÇALHO E ESTRUTURA GERAL                                  */
+/* ============================================================ */
+
+#logo-cabecalho {
+    width: 200px;
+    height: auto;        
+    max-width: 100%;
+}
+
+.conteudo-principal {
+    padding: 40px 120px 80px 120px; /* Margem lateral exata de 120px */
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.secao-carrossel { 
+    min-width: 0; /* Impede que o flexbox estoure a largura da tela */
+}
+
+.titulo-secao {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: rgba(245, 245, 245, 0.55);  
+    margin-bottom: 20px;
+}
+
+/* ============================================================ */
+/* CONTAINER DO CARROSSEL (ROLAGEM / ARRASTO)                   */
+/* ============================================================ */
+
+.carrossel-container {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    padding: 10px 0;
+    cursor: grab;
+    -ms-overflow-style: none; /* IE / Edge */
+    scrollbar-width: none;    /* Firefox */
+}
+
+.carrossel-container::-webkit-scrollbar { 
+    display: none; 
+}
+
+/* Estado de clique e arrasto no JS */
+.carrossel-container.arrastando {
+    cursor: grabbing;
+    user-select: none;
+}
+
+.carrossel-container.arrastando * {
+    pointer-events: none; /* Evita hover/clique durante o arrasto */
+}
+
+/* ============================================================ */
+/* CARDS DO CARROSSEL (4 CARDS INTEIROS + 1 CORTADO = 4.5 CARDS) */
+/* ============================================================ */
+
+/* PLAYLISTS FAVORITAS, AMIGOS E ARTISTAS */
+.card-playlistFav,
+.card-amigo,
+.card-artista {
+    /* 4.5 cards na tela possuem exatos 4 espaços (gaps) de 24px entre eles */
+    flex: 0 0 calc((100% - (4 * 24px)) / 4.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    user-select: none;
+}
+
+/* CONTAINER DA CAPA */
+.capa-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: var(--raio-borda, 12px);
+    overflow: hidden;
+    transition: box-shadow 0.2s ease;
+}
+
+.img-capa {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+}
+
+/* Escurecimento leve da capa no Hover */
+.capa-container::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* ÍCONE DA ESTRELA */
+.icone-estrela {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: var(--laranja-destaque);
+    font-size: 1.1rem;
+    z-index: 2;
+    transition: opacity 0.2s ease;
+}
+
+/* OVERLAY DE STATUS (MÉTRICAS) */
+.img-status-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    max-height: 75%;
+    object-fit: contain;
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+    z-index: 3;
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+/* TÍTULOS E NOMES DOS CARDS */
+.nome-card,
+.nome-artista {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--cor-texto);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    margin: 0;
+}
+
+/* ============================================================ */
+/* EFEITOS HOVER NO CARD                                        */
+/* ============================================================ */
+
+.card-playlistFav:hover .capa-container {
+    box-shadow: 0 0 0 3px var(--cor-botao); /* Borda verde limpa */
+}
+
+.card-playlistFav:hover .capa-container::after { 
+    opacity: 1; 
+}
+
+.card-playlistFav:hover .icone-estrela { 
+    opacity: 0; 
+}
+
+.card-playlistFav:hover .img-status-overlay {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.92);
+}
+
+/* ============================================================ */
+/* CARDS ESPECÍFICOS DE OUTRAS SEÇÕES                           */
+/* ============================================================ */
+
+/* GÊNEROS (3 CARDS VISÍVEIS POR VEZ) */
+.card-genero {
+    flex: 0 0 calc((100% - (2 * 24px)) / 3);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    user-select: none;
+}
+
+.card-genero img {
+    width: 100%;
+    aspect-ratio: 1.47 / 1;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+}
+
+/* ARTISTAS (Perfil Circular) */
+.card-artista img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+}
+
+.card-artista-perfil {
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.card-artista-perfil img {
+    width: 80%;
+    border-radius: 50%;
+    border: 2px solid var(--laranja-destaque);
+}
+
+.nome-artista {
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+/* BOTÃO MAIS ARTISTAS */
+.botao-mais-artistas {
+    display: block;
+    width: fit-content;
+    margin: 40px 0 0 auto;
+    padding: 14px 40px;
+    background: var(--cor-botao);
+    color: var(--cor-texto);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    border-radius: 4px;
+    transition: filter 0.2s ease;
+}
+
+.botao-mais-artistas:hover {
+    filter: brightness(1.1); 
+}
