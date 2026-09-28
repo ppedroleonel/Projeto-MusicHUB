@@ -1,6 +1,5 @@
-/* ============================================================ */
-/* CABEÇALHO E ESTRUTURA GERAL                                  */
-/* ============================================================ */
+/* CABEÇALHO E ESTRUTURA GERAL */
+
 
 #logo-cabecalho {
     width: 200px;
@@ -26,9 +25,9 @@
     margin-bottom: 20px;
 }
 
-/* ============================================================ */
-/* CONTAINER DO CARROSSEL (ROLAGEM / ARRASTO)                   */
-/* ============================================================ */
+
+/* CONTAINER DO CARROSSEL (ROLAGEM / ARRASTO) */
+
 
 .carrossel-container {
     display: flex;
@@ -54,9 +53,8 @@
     pointer-events: none; /* Evita hover/clique durante o arrasto */
 }
 
-/* ============================================================ */
 /* CARDS DO CARROSSEL (4 CARDS INTEIROS + 1 CORTADO = 4.5 CARDS) */
-/* ============================================================ */
+
 
 /* PLAYLISTS FAVORITAS, AMIGOS E ARTISTAS */
 .card-playlistFav,
@@ -142,9 +140,8 @@
     margin: 0;
 }
 
-/* ============================================================ */
 /* EFEITOS HOVER NO CARD                                        */
-/* ============================================================ */
+
 
 .card-playlistFav:hover .capa-container {
     box-shadow: 0 0 0 3px var(--cor-botao); /* Borda verde limpa */
@@ -163,9 +160,9 @@
     transform: translate(-50%, -50%) scale(0.92);
 }
 
-/* ============================================================ */
+
 /* CARDS ESPECÍFICOS DE OUTRAS SEÇÕES                           */
-/* ============================================================ */
+
 
 /* GÊNEROS (3 CARDS VISÍVEIS POR VEZ) */
 .card-genero {
@@ -225,3 +222,81 @@
 .botao-mais-artistas:hover {
     filter: brightness(1.1); 
 }
+
+/* RODAPÉ */
+
+.rodape {
+    width: 100%;
+
+    min-height: 148px;
+
+    box-sizing: border-box;
+
+    padding: 24px 30px 12px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.rodape-superior {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rodape-esquerda {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.rodape-direita {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.rodape-icones {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.rodape-icones a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rodape-icones img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.rodape-logo img {
+    width: 115px;
+    height: auto;
+}
+
+.rodape-inferior {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rodape-inferior p {
+    margin: 0;
+}
+
+.rodape-links {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.rodape-links a {
+    text-decoration: none;
+}
+
