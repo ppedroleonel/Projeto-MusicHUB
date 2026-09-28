@@ -1,0 +1,226 @@
+/* header */
+.cabecalho img {
+    margin: 50px;
+    width: 169px;   
+}
+
+.botoes {
+    margin: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn-cadastrar {
+    padding: 20px 40px;
+    border-radius: 15px;
+    border: none;
+    background-color: var(--cor-botao);
+    color: var(--cor-texto);
+    font-weight: 700;
+    font-size: 1em;
+    cursor: pointer;
+
+    transition: transform 0.2s; 
+}
+
+.btn-login {
+    padding: 20px 30px;
+    border-radius: 15px;
+    border: none;
+    background-color: var(--cor-botao);
+    color: var(--cor-texto);
+    font-weight: 700;
+    font-size: 1em;
+    cursor: pointer;
+
+    transition: transform 0.2s;
+}
+
+.btn-cadastrar:hover {
+    cursor: pointer;
+    transform: translateY(-1px);
+}
+
+.btn-login:hover {
+    cursor: pointer;
+    transform: translateY(-1px);
+}
+
+
+.navegacao > a {
+    color: var(--cor-texto);
+    text-decoration: none;
+
+    transition: 0.2s;
+}
+
+.navegacao > a:hover {
+    color: var(--cor-botao)
+}
+    
+.cabecalho {
+    background-color: var(--cor-fundo);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    height: 10vh; 
+    border-bottom: 1px solid var(--laranja-destaque); /* Linha sutil separando o header da pagina */
+}
+
+/* Agrupamentos para o space-between funcionar */
+.cabecalho-esquerda, .cabecalho-direita {
+    display: flex;
+    align-items: center;
+}
+
+/* Linha vertical que separa o logo da navegação */
+.divisor {
+    height: 40px;
+    width: 2px;
+    background-color: var(--amarelo-destaque);
+    margin: 0 40px;
+}
+
+.navegacao {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.navegacao a {
+    text-transform: uppercase;
+    font-size: 1em; 
+    font-weight: 500;
+}
+
+/* Ocultar o botão menu no desktop (> 768px) */
+.botao-menu {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--cor-texto);
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+
+
+/* conteudo */
+
+ .conteudo {
+    height: 90vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    gap: 50px;
+} 
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input { 
+    height: 50px;
+    border-radius: 10px;
+
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.campo label {
+    color: var(--cor-texto);
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.campo input {
+    border: none;
+    outline: none; /* Tira a borda quando vc aperta no input */
+
+    background-color: var(--cor-texto);
+    padding: 0 20px;
+    width: 100%;
+
+    font-size: 1em;
+}
+
+.campo input::placeholder {
+    color: #00000050;
+    font-style: italic;
+}
+
+.campo-senha {
+    position: relative;
+}
+
+.botao-olho {
+    position: absolute;
+
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background: transparent;
+    border: none;
+
+    cursor: pointer;
+    color: #00000050;
+}
+
+.redefinir {
+    display: flex;
+    margin-top: -30px;
+    gap: 10px;
+}
+
+.redefinir > span {
+    font-weight: 700;
+    color: var(--cinza-detalhes);
+}
+
+.redefinir > a:hover {
+    color: var(--cor-botao);
+    cursor: pointer;
+}
+
+/* BOTÃO ENTRAR */
+
+#btn-entrar {
+    border-radius: 30px;
+    border: none;
+    padding: 20px 200px;
+    
+    background-color: var(--cinza-detalhes);
+    color: var(--cor-fundo);
+
+    font-size: 1.2em;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+    transition: transform 0.2s;
+}
+
+#btn-entrar:hover {
+    background-color: var(--cor-botao);
+    cursor: pointer;
+
+    transform: translateY(-3px);
+}
+
+.erro {
+    color: #ff6b6b;
+    text-align: center;
+    margin-top: 15px;   /* se você usou a Opção 1 (sem gap) */
+}
+
