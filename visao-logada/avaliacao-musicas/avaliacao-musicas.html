@@ -225,6 +225,33 @@
         </nav>
     </div>
 </footer>
+
+    <dialog id="pop-up-avaliar">
+        <div class="pop-up-cabecalho">
+            <div class="cabecalho-X">
+            <h2>Avaliar</h2>
+            <i class="fa-solid fa-xmark"></i>
+            </div>
+            <span class="estrelas-pop-up"> <!-- Mudei o nome aqui para não herdar estilos da página -->
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </span>
+
+            <span class="divisoria-pop-up"></span>
+
+            <form id="form-avaliacao">
+                <div class="campo-comentario"> <!-- Mudado de .comentario para .campo-comentario -->
+                    <label for="input-comentario">Deixe seu Comentario (opcional)</label>
+                    <textarea id="input-comentario" placeholder="Escreva o que achou."></textarea>
+                </div>
+                <button type="submit" class="btn-enviar-avaliacao">Avaliar</button>
+            </form>
+        </div>
+    </dialog>
+<script src="avaliacao-musicas.js"></script>
 </body>
 
 </html>

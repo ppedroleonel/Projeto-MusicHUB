@@ -1,3 +1,13 @@
+a {
+    color: var(--cor-texto);
+    text-decoration: none;
+
+    transition: 0.2s;
+}
+
+a:hover {
+    color: var(--cor-botao)
+}
 
 .conteudo {
   display: grid;
@@ -8,6 +18,8 @@
   min-height: 80vh;
 }
 
+/* lado esquerdo do grid */
+
 .coluna-esquerda {
   display: flex;
   flex-direction: column;
@@ -16,7 +28,7 @@
 
 .card-album {
   width: 100%;
-  height: 400px; /* ajusta esse valor até bater com a proporção que você quer */
+  height: 400px;
   border-radius: 8px;
   object-fit: cover;
   border: 2px dashed var(--cor-botao);
@@ -86,6 +98,8 @@
 .botao-play img {
   background-color: #2C2841;
 }
+
+/* lado direito do grid */
 
 .coluna-direita {
   display: flex;
@@ -331,4 +345,117 @@
 .rodape-links a:not(:last-child) {
   padding-right: 8px;
   border-right: 1px solid #555;
+}
+
+/* pop-up */
+dialog {
+  padding: 0;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+}
+
+#pop-up-avaliar {
+  margin:  auto;
+  border-radius: 10px;
+  padding: 30px 40px;
+  width: 900px;
+}
+
+.pop-up-cabecalho {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.estrelas-pop-up {
+  color: var(--laranja-destaque);
+  font-size: 1.5em;
+}
+
+.estrelas-pop-up i.pintada {
+  color: var(--laranja-destaque); 
+}
+
+
+.estrelas-pop-up > i {
+  cursor: pointer;
+}
+
+.divisoria-pop-up {
+  margin: 20px 0;
+  height: 2px;
+  background-color: black;
+}
+
+#form-avaliacao {
+  display: flex;
+  flex-direction: column;
+  gap: 50px; /*  modificar jaja */
+}
+
+.campo-comentario {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.campo-comentario > label {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.campo-comentario > #input-comentario {
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 0 20px;
+  font-size: 1em;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  height: 100px;
+  font-family: inherit;
+  resize: none;
+}
+
+.btn-enviar-avaliacao {
+  width: 100%;
+  max-width: 280px;         
+  margin: 0 auto;           
+  padding: 6px 12px;        
+  background-color: var(--cor-botao);
+  color: var(--cor-texto);
+  font-weight: 700;
+  font-size: 1em;
+  
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+
+  transition: transform 0.2s;
+}
+
+.btn-enviar-avaliacao:hover {
+  cursor: pointer;
+  transform: translateY(-1px);
+  filter:brightness(0.9);
+}
+
+.cabecalho-X {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cabecalho-X > i.fa-xmark {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+
+  transition: transform 0.2s;
+}
+
+.cabecalho-X > i.fa-xmark:hover {
+  cursor: pointer;
+  transform: translateY(-1px);
 }
