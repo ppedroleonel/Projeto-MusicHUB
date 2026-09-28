@@ -1,0 +1,393 @@
+/* =========================================================
+   Header
+   ========================================================= */
+
+.cabecalho {
+    width: 100%;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 26px;
+    box-sizing: border-box;
+}
+
+
+
+.cabecalho-esquerda {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    display: block;
+    max-height: 35px;
+    width: auto;
+}
+
+.divisor {
+    height: 40px;
+    width: 2px;
+
+    margin: 0 14px;
+}
+
+.navegacao {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.navegacao a {
+    text-decoration: none;
+}
+
+/* Lado direito */
+
+.cabecalho-direita {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 0;
+}
+/* =========================================================
+   Barra de busca
+========================================================= */
+
+.barra-busca {
+    width: 410px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 14px;
+
+    box-sizing: border-box;
+
+    border-radius: 25px;
+
+    background-color: rgba(255, 255, 255, 0.18);
+}
+
+.barra-busca img {
+    width: 19px;
+    height: 19px;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
+}
+
+.barra-busca input {
+    width: 100%;
+
+    margin-left: 10px;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.barra-busca input::placeholder {
+    opacity: 1;
+}
+
+.botao-busca {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.botao-busca img {
+    width: 22px;
+    height: 22px;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.botao-menu {
+    display: none;
+}
+
+
+/* =========================================================
+   conteúdo principal
+   ========================================================= */
+
+.conteudo-principal {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 0 58px 55px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 42px;
+}
+
+
+/* =========================================================
+   cabeçalho seções
+   ========================================================= */
+
+.cabecalho-secao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+.titulo-secao {
+    margin: 0;
+    padding-bottom: 7px;
+}
+
+.titulo-pagina {
+    margin: 35px 0 5px 0;
+
+    padding-bottom: 8px;
+
+    width: fit-content;
+
+    font-size: 28px;
+    font-weight: 500;
+
+    border-bottom: 3px solid var(--amarelo-destaque);
+}
+
+/* =========================================================
+   botão
+   ========================================================= */
+
+.botao-criar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    padding: 7px 14px;
+
+    cursor: pointer;
+}
+
+.icone-mais {
+    line-height: 1;
+}
+
+
+/* =========================================================
+   grid
+   ========================================================= */
+
+.grid-playlists {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    column-gap: 36px;
+    row-gap: 28px;
+}
+
+
+/* =========================================================
+   card
+   ========================================================= */
+
+.card-playlist {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    cursor: pointer;
+}
+
+.card-playlist img {
+    display: block;
+
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   footer
+   ========================================================= */
+
+.rodape {
+    width: 100%;
+
+    min-height: 148px;
+
+    box-sizing: border-box;
+
+    padding: 24px 30px 12px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.rodape-superior {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rodape-esquerda {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.rodape-direita {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.rodape-icones {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.rodape-icones a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rodape-icones img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.rodape-logo img {
+    width: 115px;
+    height: auto;
+}
+
+.rodape-inferior {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rodape-inferior p {
+    margin: 0;
+}
+
+.rodape-links {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.rodape-links a {
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   responsividade
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .conteudo-principal {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
+    .grid-playlists {
+        column-gap: 22px;
+    }
+
+    .navegacao {
+        display: none;
+    }
+
+    .botao-menu {
+        display: block;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .conteudo-principal {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .grid-playlists {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+        row-gap: 25px;
+    }
+
+    .cabecalho {
+        padding: 0 18px;
+    }
+
+    .cabecalho-direita .divisor {
+        display: none;
+    }
+
+    .nome-usuario {
+        display: none;
+    }
+
+    .rodape-superior,
+    .rodape-inferior {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
