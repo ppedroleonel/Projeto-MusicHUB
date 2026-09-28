@@ -48,6 +48,16 @@
 
 .navegacao a {
     text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.navegacao a:hover {
+    color: #87BBA2;
+}
+
+.navegacao a.ativo {
+    color: #87BBA2;
 }
 
 /* Lado direito */
@@ -286,8 +296,8 @@
 
 .rodape-direita {
     display: flex;
-    align-items: center;
-    gap: 22px;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .rodape-icones {
@@ -306,6 +316,10 @@
     width: 30px;
     height: 30px;
     object-fit: contain;
+}
+
+.rodape-logo {
+    margin-top: 20px;
 }
 
 .rodape-logo img {
