@@ -1,5 +1,8 @@
 /* CABEÇALHO E ESTRUTURA GERAL */
 
+.ativo{
+color: var(--cor-botao);
+}
 
 #logo-cabecalho {
     width: 200px;
