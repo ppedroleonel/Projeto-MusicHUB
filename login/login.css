@@ -176,6 +176,23 @@ input {
     color: #00000050;
 }
 
+.visivel {
+    color: var(--laranja-destaque);
+}
+
+.icone-olho-fechado {
+    display: none;
+}
+
+.botao-olho.visivel .icone-olho-aberto {
+    display: none;
+}
+
+.botao-olho.visivel .icone-olho-fechado {
+    display: block;
+}
+
+
 .redefinir {
     display: flex;
     gap: 10px;
@@ -219,3 +236,108 @@ input {
 
 
 
+/* RESPONSIVIDADE */
+
+/* FAZER PARA 1024px*/
+
+@media (max-width: 1024px) {
+    .cabecalho .divisor {
+        display: none;
+    }
+
+    .navegacao {
+        display: none;
+    }
+
+    .cabecalho-direita {
+        display: none;
+    }
+
+    .botao-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .navegacao.ativo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 20px;
+
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+
+        padding: 25px 50px;
+        background-color: var(--cor-fundo);
+        border-bottom: 1px solid var(--laranja-destaque);
+        z-index: 10;
+
+    }
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+
+    /* Cabeçalho */
+    .cabecalho {
+        height: 80px;
+    }
+
+    .remover-border-cabecalho{
+        border: none;
+    }
+
+    .cabecalho img {
+        margin: auto;
+        width: 130px;
+    }
+
+    .cabecalho .divisor {
+        display: none;
+    }
+
+    .navegacao {
+        display: none;
+    }
+
+    .cabecalho-direita {
+        display: none;
+    }
+
+    .botao-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .login {
+        width: 100%;
+        max-width: 450px;
+    }
+
+    /* Campos */
+    .campo {
+        width: 100%;
+        gap: 10px;
+    }
+
+    .campo label {
+        font-size: 1.2em;
+    }
+
+    /* Campos de senha */
+    .campo-senha {
+        width: 100%;
+    }
+
+    /* Botão cadastrar */
+    .btn-entrar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2em;
+    }
+}
