@@ -1,7 +1,7 @@
 /* header */
 .cabecalho img {
     margin: 50px;
-    width: 169px;   
+    width: 169px;
 }
 
 .botoes {
@@ -20,7 +20,7 @@
     font-size: 1em;
     cursor: pointer;
 
-    transition: transform 0.2s; 
+    transition: transform 0.2s;
 }
 
 .btn-login {
@@ -47,29 +47,30 @@
 }
 
 
-.navegacao > a {
+.navegacao>a {
     color: var(--cor-texto);
     text-decoration: none;
 
     transition: 0.2s;
 }
 
-.navegacao > a:hover {
+.navegacao>a:hover {
     color: var(--cor-botao)
 }
-    
+
 .cabecalho {
     background-color: var(--cor-fundo);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 50px;
-    height: 10vh; 
-    border-bottom: 1px solid var(--laranja-destaque); /* Linha sutil separando o header da pagina */
+    height: 10vh;
+    border-bottom: 1px solid var(--laranja-destaque);
+    /* Linha sutil separando o header da pagina */
 }
 
-/* Agrupamentos para o space-between funcionar */
-.cabecalho-esquerda, .cabecalho-direita {
+.cabecalho-esquerda,
+.cabecalho-direita {
     display: flex;
     align-items: center;
 }
@@ -90,7 +91,7 @@
 
 .navegacao a {
     text-transform: uppercase;
-    font-size: 1em; 
+    font-size: 1em;
     font-weight: 500;
 }
 
@@ -108,20 +109,20 @@
 
 /* conteudo */
 
- .conteudo {
+.conteudo {
     height: 90vh;
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.login {
+.cadastro {
     display: flex;
     flex-direction: column;
     border-radius: 30px;
     gap: 50px;
-} 
+}
 
 .campo {
     display: flex;
@@ -129,7 +130,7 @@
     gap: 10px;
 }
 
-input { 
+input {
     height: 50px;
     border-radius: 10px;
 
@@ -144,7 +145,8 @@ input {
 
 .campo input {
     border: none;
-    outline: none; /* Tira a borda quando vc aperta no input */
+    outline: none;
+    /* Tira a borda quando vc aperta no input */
 
     background-color: var(--cor-texto);
     padding: 0 20px;
@@ -176,29 +178,46 @@ input {
     color: #00000050;
 }
 
+.visivel {
+    color: var(--laranja-destaque);
+}
+
+.icone-olho-fechado {
+    display: none;
+}
+
+.botao-olho.visivel .icone-olho-aberto {
+    display: none;
+}
+
+.botao-olho.visivel .icone-olho-fechado {
+    display: flex;
+}
+
+
 .redefinir {
     display: flex;
     margin-top: -30px;
     gap: 10px;
 }
 
-.redefinir > span {
+.redefinir>span {
     font-weight: 700;
     color: var(--cinza-detalhes);
 }
 
-.redefinir > a:hover {
+.redefinir>a:hover {
     color: var(--cor-botao);
     cursor: pointer;
 }
 
-/* BOTÃO ENTRAR */
+/* BOTÃO ENVIAR CADASTRO */
 
-#btn-entrar {
+#btn-enviar-cadastro {
     border-radius: 30px;
     border: none;
     padding: 20px 200px;
-    
+
     background-color: var(--cinza-detalhes);
     color: var(--cor-fundo);
 
@@ -211,16 +230,163 @@ input {
     transition: transform 0.2s;
 }
 
-#btn-entrar:hover {
+#btn-enviar-cadastro:hover {
     background-color: var(--cor-botao);
     cursor: pointer;
 
     transform: translateY(-3px);
 }
 
-.erro {
-    color: #ff6b6b;
-    text-align: center;
-    margin-top: 15px;   /* se você usou a Opção 1 (sem gap) */
+#erro-senha {
+    margin-top: -40px;
+    color: red;
+    font-size: 1em;
 }
 
+
+
+/* RESPONSIVIDADE */
+
+/* FAZER PARA 1024px*/
+
+@media (max-width: 1024px) {
+    .cabecalho .divisor {
+        display: none;
+    }
+
+    .navegacao {
+        display: none;
+    }
+
+    .cabecalho-direita {
+        display: none;
+    }
+
+    .botao-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .navegacao.ativo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 20px;
+
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+
+        padding: 25px 50px;
+        background-color: var(--cor-fundo);
+        border-bottom: 1px solid var(--laranja-destaque);
+        z-index: 10;
+
+    }
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+
+    /* Cabeçalho */
+    .cabecalho {
+        height: 80px;
+    }
+
+    .remover-border-cabecalho{
+        border: none;
+    }
+
+    .cabecalho img {
+        margin: auto;
+        width: 130px;
+    }
+
+    .cabecalho .divisor {
+        display: none;
+    }
+
+    .navegacao {
+        display: none;
+    }
+
+    .cabecalho-direita {
+        display: none;
+    }
+
+    .botao-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    /* Conteúdo */
+    .conteudo {
+        min-height: calc(100vh - 80px);
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .cadastro {
+        width: 100%;
+        max-width: 450px;
+        gap: 30px;
+    }
+
+
+    /* Campos */
+    .campo {
+        width: 100%;
+        gap: 10px;
+    }
+
+    .campo label {
+        font-size: 1.2em;
+    }
+
+    /* Campos de senha */
+    .campo-senha {
+        width: 100%;
+    }
+
+    /* Mensagem de erro */
+    #erro-senha {
+        margin-top: -20px;
+        font-size: 0.9em;
+    }
+
+
+    /* Link para entrar */
+    .redefinir {
+        margin-top: -15px;
+    }
+
+
+    /* Botão cadastrar */
+    #btn-enviar-cadastro {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2em;
+    }
+
+    .navegacao.ativo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 20px;
+
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+
+        padding: 25px 50px;
+        background-color: var(--cor-fundo);
+        border-bottom: 1px solid var(--laranja-destaque);
+        z-index: 10;
+    }
+}
