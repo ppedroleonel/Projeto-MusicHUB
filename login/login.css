@@ -148,7 +148,7 @@ input {
 
 /* BOTÃO ENTRAR */
 
-.btn-entrar {
+#btn-entrar {
     border-radius: 30px;
     border: none;
     padding: 20px 200px;
@@ -165,7 +165,7 @@ input {
     transition: transform 0.2s;
 }
 
-.btn-entrar:hover {
+#btn-entrar:hover {
     background-color: var(--cor-botao);
     cursor: pointer;
 
@@ -176,4 +176,76 @@ input {
 
 /* RESPONSIVIDADE */
 
-/* refazer */
+@media (max-width: 1024px) {
+    .cabecalho .divisor {
+        display: none;
+    }
+
+    .cabecalho img {
+        margin: 20px;
+        width: 150px;
+    }
+    
+
+    .cabecalho-direita {
+        display: none;
+    }
+
+    .cabecalho {
+        position: relative;
+        height: auto;
+        min-height: 10vh;
+        flex-wrap: wrap;
+        row-gap: 15px;
+    }
+
+    .cabecalho-esquerda {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .botao-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 40px;
+        right: 50px;
+    }
+
+
+    .navegacao {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0;
+
+        max-height: 0; 
+        overflow: hidden;
+        opacity: 0;
+
+        width: 100%;
+        padding: 0 50px;
+        background-color: var(--cor-fundo);
+
+        transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+    }
+
+    .navegacao.ativo {
+        max-height: min-content;
+        opacity: 1;
+        gap: 20px;
+        padding: 20px 0px;  
+    }
+}
+
+
+@media (max-width: 768px) {
+    .cabecalho img {
+        width: 130px;
+    }
+
+
+    .botao-menu {
+        top: 35px;
+    }   
+}
