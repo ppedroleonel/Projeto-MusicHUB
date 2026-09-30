@@ -28,7 +28,7 @@ btnConfirmarSenha.addEventListener("click", () => {
 })
 
 
-const formCadastro = document.querySelector(".cadastro");
+const formCadastro = document.getElementById("cadastro");
 const erroSenha = document.getElementById("erro-senha");
 
 
