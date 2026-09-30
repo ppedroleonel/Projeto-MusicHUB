@@ -28,12 +28,12 @@ btnConfirmarSenha.addEventListener("click", () => {
 })
 
 
-const formLogin = document.querySelector(".cadastro");
+const formCadastro = document.querySelector(".cadastro");
 const erroSenha = document.getElementById("erro-senha");
 
 
 
-formLogin.addEventListener("submit", (e) => {
+formCadastro.addEventListener("submit", (e) => {
     if(campoSenha.value != campoConfirmarSenha.value)
     {
         e.preventDefault();
@@ -47,9 +47,9 @@ formLogin.addEventListener("submit", (e) => {
 
 const menu = document.getElementById("menu");
 const navegacao = document.querySelector(".navegacao");
-const cabecalho = document.querySelector(".cabecalho");
+const conteudo = document.querySelector(".conteudo");
 
 menu.addEventListener("click", () => {
-    navegacao.classList.toggle("ativo");
-    cabecalho.classList.toggle("remover-border-cabecalho")
+    navegacao.classList.toggle("ativo")
+    conteudo.classList.toggle("menu-aberto");
 });
