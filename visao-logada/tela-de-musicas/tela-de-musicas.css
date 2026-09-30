@@ -1,0 +1,524 @@
+
+/* =========================================
+   Principal
+========================================= */
+
+.pagina-album {
+    width: 100%;
+    padding: 60px;
+    margin-bottom: 45px;
+}
+
+.album-container {
+    width: 1000px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 30px;
+}
+
+
+/* =========================================
+   Capa
+========================================= */
+
+.album-lateral {
+    width: 100%;
+}
+
+.capa-container {
+    width: 200px;
+    height: 300px;
+    margin-left: 0;
+}
+
+.capa-album {
+    width: 100%;
+    height: 100%;
+
+}
+
+
+/* =========================================
+   Estatísticas
+========================================= */
+
+.estatisticas-album {
+    width: 195px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    margin-top: 7px;
+
+    color: #ffffff;
+    font-size: 10px;
+}
+
+.estatisticas-album span {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.estatisticas-album span:first-child {
+    color: #ff674f;
+    font-size: 18px;
+}
+
+.estatisticas-album span:first-child {
+    color: #ffffff;
+    font-size: 11px;
+}
+
+.estatisticas-album span:last-child {
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.estatisticas-album span:last-child {
+    font-size: 11px;
+}
+
+
+/* =========================================
+   Menu Onde Escutar
+========================================= */
+
+.onde-escutar {
+    width: 195px;
+    margin-top: 35px;
+
+    padding: 0 13px 12px;
+
+    background: #282641;
+
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.onde-escutar h3 {
+    margin: 0 -12px 10px;
+
+    padding: 9px 10px;
+
+    text-align: center;
+
+    background: #2d2a4b;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.plataforma {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 7px 0;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    font-size: 13px;
+}
+
+.plataforma img {
+    width: 25px;
+    height: 25px;
+
+    object-fit: contain;
+}
+
+.plataforma span {
+    flex: 1;
+}
+
+
+
+/* =========================================
+   Conteúdo álbum
+========================================= */
+
+.album-conteudo {
+    min-width: 0;
+}
+
+.album-header h1 {
+    margin-bottom: 8px;
+
+    font-size: 36px;
+
+    font-weight: 700;
+}
+
+.informacoes-album {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #ffffff;
+
+    font-size: 15px;
+}
+
+.informacoes-album i {
+    width: 1px;
+    height: 18px;
+    background: #f4dd70;
+}
+
+
+/* =========================================
+   Descrição
+========================================= */
+
+.descricao-album {
+    max-width: 700px;
+
+    margin-top: 12px;
+    margin-bottom: 12px;
+
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   Botões
+========================================= */
+
+.acoes-album {
+    display: flex;
+    align-items: center;
+
+    gap: 0;
+
+    margin-top: 20px;
+}
+
+.botao-curtir {
+    height: 35px;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 20px;
+    background: #87BBA2;
+    color: #ffffff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.favorite {
+    margin-left: 10px;
+    height: 20px;
+    width: 20px;
+}
+
+.botao-curtir > span {
+    padding: 10px 15px;
+}
+
+.separador {
+    width: 1px;
+    height: 35px;
+    background-color: #ffffff;
+}
+
+.botao-curtir img[alt="seta"] {
+    margin-left: 8px;
+    margin-right: 10px;
+    margin-top: 3px;
+}
+
+.seta {
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+
+    border-left: 1px solid rgba(255,255,255,.4);
+
+    font-size: 18px;
+}
+
+.botao-avaliar {
+    height: 35px;
+
+    margin-left: 32px;
+
+    padding: 0 17px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    border: none;
+    border-radius: 20px;
+
+    background: #f5df6b;
+    color: #17172f;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.star {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 2px;
+}
+
+.quantidade-avaliacoes {
+    margin-left: 12px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+
+.linha {
+    width: 100%;
+    height: 2px;
+
+    margin-top: 20px;
+
+    background: #f0d95e;
+}
+
+
+/* =========================================
+   Comentários
+========================================= */
+
+.comentarios {
+    width: 100%;
+}
+
+.comentario {
+    min-height: 90px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    border-bottom: 1px solid #6b6a77;
+}
+
+.avatar-comentario {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    background: #dedee0;
+}
+
+.avatar-comentario img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.comentario-conteudo {
+    flex: 1;
+}
+
+.comentario-topo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.usuario {
+    font-size: 15px;
+}
+
+.estrelas {
+    color: #F15D3A;
+    font-size: 19px;
+}
+
+.comentario-conteudo p {
+    margin-top: 2px;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+.mais-comentarios {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 13px;
+}
+
+.mais-comentarios button {
+    width: 168px;
+    height: 30px;
+    padding: 0 20px;
+
+    border: none;
+    border-radius: 20px;
+
+    background: #87BBA2;
+    color: #ffffff;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   !Responsividade
+========================================= */
+
+@media (max-width: 800px) {
+
+    .pagina-album {
+        padding: 40px 25px;
+    }
+
+    .album-container {
+        grid-template-columns: 1fr;
+    }
+
+    .album-lateral {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .album-conteudo {
+        width: 100%;
+    }
+
+    .album-header h1 {
+        font-size: 30px;
+    }
+
+    .informacoes-album {
+        flex-wrap: wrap;
+    }
+
+    .acoes-album {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .botao-avaliar {
+        margin-left: 0;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .pagina-album {
+        padding: 30px 18px;
+    }
+
+    .capa-container,
+    .capa-album {
+        width: 190px;
+        height: 250px;
+    }
+
+    .descricao-album {
+        font-size: 14px;
+    }
+
+    .comentario {
+        gap: 12px;
+    }
+
+    .quantidade-avaliacoes {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+/* FOOTER*/
+
+.rodape {
+    width: 100%;
+
+    min-height: 148px;
+
+    box-sizing: border-box;
+
+    padding: 24px 30px 12px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.rodape-superior {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rodape-esquerda {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.rodape-direita {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.rodape-icones {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.rodape-icones a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rodape-icones img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.rodape-logo {
+    margin-top: 20px;
+}
+
+.rodape-logo img {
+    width: 115px;
+    height: auto;
+}
+
+.rodape-inferior {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rodape-inferior p {
+    margin: 0;
+}
+
+.rodape-links {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.rodape-links a {
+    text-decoration: none;
+}
