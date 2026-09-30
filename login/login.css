@@ -1,7 +1,7 @@
 /* header */
 .cabecalho img {
-    margin: 50px;
-    width: 169px;   
+    margin: 25px;
+    width: 169px;
 }
 
 .botoes {
@@ -10,98 +10,37 @@
     gap: 15px;
 }
 
-.btn-cadastrar {
-    padding: 20px 40px;
-    border-radius: 15px;
+.btn-cadastrar,
+.btn-login {
     border: none;
+    border-radius: 15px;
     background-color: var(--cor-botao);
     color: var(--cor-texto);
     font-weight: 700;
     font-size: 1em;
     cursor: pointer;
-
     transition: transform 0.2s;
+}
+
+.btn-cadastrar {
+    padding: 20px 40px;
 }
 
 .btn-login {
     padding: 20px 30px;
-    border-radius: 15px;
-    border: none;
-    background-color: var(--cor-botao);
-    color: var(--cor-texto);
-    font-weight: 700;
-    font-size: 1em;
-    cursor: pointer;
-
-    transition: transform 0.2s;
 }
 
-.btn-cadastrar:hover {
-    cursor: pointer;
-    transform: translateY(-1px);
-}
-
+.btn-cadastrar:hover,
 .btn-login:hover {
-    cursor: pointer;
     transform: translateY(-1px);
 }
 
-
-.navegacao > a {
-    color: var(--cor-texto);
-    text-decoration: none;
-
+.navegacao > a { 
     transition: 0.2s;
 }
 
-.navegacao > a:hover {
+.navegacao>a:hover {
     color: var(--cor-botao)
-}
-    
-.cabecalho {
-    background-color: var(--cor-fundo);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 50px;
-    height: 10vh; 
-    border-bottom: 1px solid var(--laranja-destaque); /* Linha sutil separando o header da pagina */
-}
-
-/* Agrupamentos para o space-between funcionar */
-.cabecalho-esquerda, .cabecalho-direita {
-    display: flex;
-    align-items: center;
-}
-
-/* Linha vertical que separa o logo da navegação */
-.divisor {
-    height: 40px;
-    width: 2px;
-    background-color: var(--amarelo-destaque);
-    margin: 0 40px;
-}
-
-.navegacao {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-}
-
-.navegacao a {
-    text-transform: uppercase;
-    font-size: 1em; 
-    font-weight: 500;
-}
-
-/* Ocultar o botão menu no desktop (> 768px) */
-.botao-menu {
-    display: none;
-    background: transparent;
-    border: none;
-    color: var(--cor-texto);
-    font-size: 1.5em;
-    cursor: pointer;
 }
 
 
@@ -119,7 +58,6 @@
 .login {
     display: flex;
     flex-direction: column;
-    border-radius: 30px;
     gap: 50px;
 } 
 
@@ -238,106 +176,4 @@ input {
 
 /* RESPONSIVIDADE */
 
-/* FAZER PARA 1024px*/
-
-@media (max-width: 1024px) {
-    .cabecalho .divisor {
-        display: none;
-    }
-
-    .navegacao {
-        display: none;
-    }
-
-    .cabecalho-direita {
-        display: none;
-    }
-
-    .botao-menu {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-        .navegacao.ativo {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        gap: 20px;
-
-        position: absolute;
-        top: 80px;
-        left: 0;
-        width: 100%;
-
-        padding: 25px 50px;
-        background-color: var(--cor-fundo);
-        border-bottom: 1px solid var(--laranja-destaque);
-        z-index: 10;
-
-    }
-}
-
-/* Celulares */
-@media (max-width: 768px) {
-
-    /* Cabeçalho */
-    .cabecalho {
-        height: 80px;
-    }
-
-    .remover-border-cabecalho{
-        border: none;
-    }
-
-    .cabecalho img {
-        margin: auto;
-        width: 130px;
-    }
-
-    .cabecalho .divisor {
-        display: none;
-    }
-
-    .navegacao {
-        display: none;
-    }
-
-    .cabecalho-direita {
-        display: none;
-    }
-
-    .botao-menu {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .login {
-        width: 100%;
-        max-width: 450px;
-    }
-
-    /* Campos */
-    .campo {
-        width: 100%;
-        gap: 10px;
-    }
-
-    .campo label {
-        font-size: 1.2em;
-    }
-
-    /* Campos de senha */
-    .campo-senha {
-        width: 100%;
-    }
-
-    /* Botão cadastrar */
-    .btn-entrar {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.2em;
-    }
-}
+/* refazer */
