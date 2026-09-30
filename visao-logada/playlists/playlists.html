@@ -4,17 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Playlists</title>
+    <title>Playlists - MusicHub</title>
 
     <link rel="stylesheet" href="../playlists/playlists.css">
     <link rel="stylesheet" href="/styles/global.css">
-    <link rel="stylesheet" href="/imgs">
-
 </head>
 
 <body>
 
-    <!-- HEADER LOGADO -->
+    <!-- HEADER -->
     <header class="cabecalho">
         <!-- Lado Esquerdo -->
         <div class="cabecalho-esquerda">
@@ -44,7 +42,6 @@
             </div>
         </div>
 
-        <!-- RESPONSIVIDADE -->
         <button class="botao-menu" id="menu">
             <i class="fa-solid fa-bars"></i>
         </button>
@@ -52,7 +49,6 @@
 
 
     <!-- CONTEÚDO PRINCIPAL -->
-
     <main class="conteudo-principal">
 
         <!-- SUAS PLAYLISTS -->
@@ -61,183 +57,218 @@
                 <h2 class="titulo-secao">Suas Playlists</h2>
 
                 <button class="botao-criar">
-                    CRIAR<br>PLAYLIST <span class="icone-mais">+</span>
+                    CRIAR PLAYLIST <span class="icone-mais">+</span>
                 </button>
             </div>
 
-            <!-- SEÇÃO 1 -->
-            <div class="grid-playlists">
-                <!-- Card 1 -->
-                <div class="card-playlist">
-                    <img src="/imgs/playlist/playlist1.png" alt="Capa Bob Marley">
+            <div class="carrossel-wrapper">
+                <button class="btn-carrossel btn-prev" aria-label="Anterior">❮</button>
+
+                <div class="carrossel-playlists">
+                    <div class="card-playlist">
+                        <img src="/imgs/playlist/playlist1.png" alt="Capa Seu Jorge">
+                        <p class="nome-playlist">Seu Jorge</p>
+                    </div>
+                    <div class="card-playlist">
+                        <img src="/imgs/playlist/playlist2.png" alt="Capa Charlie Brown Jr.">
+                        <p class="nome-playlist">New Metal</p>
+                    </div>
+                    <div class="card-playlist">
+                        <img src="/imgs/playlist/playlist3.png" alt="Capa Gangsta Rap">
+                        <p class="nome-playlist">Gangsta Rap</p>
+                    </div>
+                    <div class="card-playlist">
+                        <img src="/imgs/playlist/playlist4.png" alt="Capa Best of Taylor Swift">
+                        <p class="nome-playlist">Best of Taylor Swift</p>
+                    </div>
+                    <div class="card-playlist">
+                        <img src="/imgs/playlist/playlist5.png" alt="Capa Punk Classics">
+                        <p class="nome-playlist">Punk Classics</p>
+                    </div>
+                    <div class="card-playlist">
+                        <img src="/imgs/playlist/playlist6.png" alt="Capa Classic Rock">
+                        <p class="nome-playlist">Classic Rock</p>
+                    </div>
+                    <div class="card-playlist">
+                        <img src="/imgs/playlist/playlist7.png" alt="Capa Best of Oasis">
+                        <p class="nome-playlist">Best of Oasis</p>
+                    </div>
+                    <div class="card-playlist">
+                        <img src="/imgs/playlist/playlist8.png" alt="Capa Charlie Brown Jr.">
+                        <p class="nome-playlist">Charlie Brown Jr.</p>
+                    </div>
+                    <div class="card-playlist">
+                        <img src="/imgs/playlist/playlist4.png" alt="Capa Best of Taylor Swift">
+                        <p class="nome-playlist">Best of Taylor Swift</p>
+                    </div>
+                    <div class="card-playlist">
+                        <img src="/imgs/playlist/playlist10.png" alt="Capa Lost in the city">
+                        <p class="nome-playlist">Lost in the city</p>
+                    </div>
                 </div>
 
-                <!-- Card 2 -->
-                <div class="card-playlist">
-                    <img src="/imgs/playlist/playlist2.png" alt="Capa New Metal">
-                </div>
-
-                <!-- Card 3 -->
-                <div class="card-playlist">
-                    <img src="/imgs/playlist/playlist3.png" alt="Capa Gangsta Rap">
-                </div>
-
-                <!-- Card 4 -->
-                <div class="card-playlist">
-                    <img src="/imgs/playlist/playlist4.png" alt="Capa Best of Taylor Swift">
-                </div>
-
-                <!-- Card 5 -->
-                <div class="card-playlist">
-                    <img src="/imgs/playlist/playlist5.png" alt="Capa Punk Classics">
-                </div>
+                <button class="btn-carrossel btn-next" aria-label="Próximo">❯</button>
             </div>
         </section>
 
-        <!-- SEÇÃO 2 -->
+        <!-- PLAYLISTS RECENTES -->
         <section class="secao-playlists">
             <div class="cabecalho-secao">
                 <h2 class="titulo-secao">Playlists Recentes</h2>
             </div>
 
-            <div class="grid-playlists">
-                <!-- Card 1 -->
-                <div class="card-playlist">
-                    <img src="/imgs/playlist/recentes1.png" alt="Capa Bob Marley">
+            <div class="carrossel-wrapper">
+                <button class="btn-carrossel btn-prev" aria-label="Anterior">❮</button>
+
+                <div class="carrossel-playlists"> 
+                    <div class="card-playlist">
+                        <img src="/imgs/playlist/playlist4.png" alt="Capa Best of Taylor Swift">
+                        <p class="nome-playlist">Best of Taylor Swift</p>
+                    </div>
+                    <div class="card-playlist">
+                        <img src="/imgs/playlist/playlist6.png" alt="Capa Classic Rock">
+                        <p class="nome-playlist">Classic Rock</p>
+                    </div>
+                    <div class="card-playlist">
+                        <img src="/imgs/playlist/playlist8.png" alt="Capa Charlie Brown Jr.">
+                        <p class="nome-playlist">Charlie Brown Jr.</p>
+                    </div>
+                    <div class="card-playlist">
+                        <img src="/imgs/playlist/playlist4.png" alt="Capa Best of Taylor Swift">
+                        <p class="nome-playlist">Best of Taylor Swift</p>
+                    </div>
+                    <div class="card-playlist">
+                        <img src="/imgs/playlist/playlist7.png" alt="Capa Best of Oasis">
+                        <p class="nome-playlist">Best of Oasis</p>
+                    </div>
+                    <div class="card-playlist">
+                        <img src="/imgs/playlist/playlist10.png" alt="Capa Lost in the city">
+                        <p class="nome-playlist">Lost in the city</p>
+                    </div>
+                    <div class="card-playlist">
+                        <img src="/imgs/playlist/playlist1.png" alt="Capa Seu Jorge">
+                        <p class="nome-playlist">Seu Jorge</p>
+                    </div>
+                    <div class="card-playlist">
+                        <img src="/imgs/playlist/playlist2.png" alt="Capa Charlie Brown Jr.">
+                        <p class="nome-playlist">New Metal</p>
+                    </div>
+                    <div class="card-playlist">
+                        <img src="/imgs/playlist/playlist3.png" alt="Capa Gangsta Rap">
+                        <p class="nome-playlist">Gangsta Rap</p>
+                    </div>
+                   
+                    <div class="card-playlist">
+                        <img src="/imgs/playlist/playlist5.png" alt="Capa Punk Classics">
+                        <p class="nome-playlist">Punk Classics</p>
+                    </div>
                 </div>
 
-                <!-- Card 2 -->
-                <div class="card-playlist">
-                    <img src="/imgs/playlist/recentes2.png" alt="Capa New Metal">
-                </div>
-
-                <!-- Card 3 -->
-                <div class="card-playlist">
-                    <img src="/imgs/playlist/recentes3.png" alt="Capa Gangsta Rap">
-                </div>
-
-                <!-- Card 4 -->
-                <div class="card-playlist">
-                    <img src="/imgs/playlist/recentes4.png" alt="Capa Best of Taylor Swift">
-                </div>
-
-                <!-- Card 5 -->
-                <div class="card-playlist">
-                    <img src="/imgs/playlist/recentes5.png" alt="Capa Punk Classics">
-                </div>
+                <button class="btn-carrossel btn-next" aria-label="Próximo">❯</button>
             </div>
         </section>
 
-        <!-- SEÇÃO 3 -->
+        <!-- PLAYLISTS MAIS OUVIDAS -->
         <section class="secao-playlists">
             <div class="cabecalho-secao">
                 <h2 class="titulo-secao">Playlists Mais Ouvidas</h2>
             </div>
 
-            <div class="grid-playlists">
-                <!-- Card 1 -->
-                <div class="card-playlist">
-                    <img src="/imgs/playlist/playlist1.png" alt="Capa Bob Marley">
+            <div class="carrossel-wrapper">
+                <button class="btn-carrossel btn-prev" aria-label="Anterior">❮</button>
+
+                <div class="carrossel-playlists">
+                    <div class="card-playlist">
+                        <img src="/imgs/playlist/playlist6.png" alt="Capa Classic Rock">
+                        <p class="nome-playlist">Classic Rock</p>
+                    </div>
+                    <div class="card-playlist">
+                        <img src="/imgs/playlist/playlist7.png" alt="Capa Best of Oasis">
+                        <p class="nome-playlist">Best of Oasis</p>
+                    </div>
+                     <div class="card-playlist">
+                        <img src="/imgs/playlist/playlist4.png" alt="Capa Best of Taylor Swift">
+                        <p class="nome-playlist">Best of Taylor Swift</p>
+                    </div>
+                    <div class="card-playlist">
+                        <img src="/imgs/playlist/playlist8.png" alt="Capa Charlie Brown Jr.">
+                        <p class="nome-playlist">Charlie Brown Jr.</p>
+                    </div>
+                    <div class="card-playlist">
+                        <img src="/imgs/playlist/playlist1.png" alt="Capa Bob Marley">
+                        <p class="nome-playlist">Seu Jorge</p>
+                    </div>
+                    <div class="card-playlist">
+                        <img src="/imgs/playlist/playlist10.png" alt="Capa Lost in the city">
+                        <p class="nome-playlist">Lost in the city</p>
+                    </div>
+                    <div class="card-playlist">
+                        <img src="/imgs/playlist/playlist2.png" alt="Capa New Metal">
+                        <p class="nome-playlist">New Metal</p>
+                    </div>
+                    <div class="card-playlist">
+                        <img src="/imgs/playlist/playlist3.png" alt="Capa Gangsta Rap">
+                        <p class="nome-playlist">Gangsta Rap</p>
+                    </div>
+                    <div class="card-playlist">
+                        <img src="/imgs/playlist/playlist4.png" alt="Capa Best of Taylor Swift">
+                        <p class="nome-playlist">Best of Taylor Swift</p>
+                    </div>
+                    <div class="card-playlist">
+                        <img src="/imgs/playlist/playlist5.png" alt="Capa Punk Classics">
+                        <p class="nome-playlist">Punk Classics</p>
+                    </div>
                 </div>
 
-                <!-- Card 2 -->
-                <div class="card-playlist">
-                    <img src="/imgs/playlist/playlist2.png" alt="Capa New Metal">
-                </div>
-
-                <!-- Card 3 -->
-                <div class="card-playlist">
-                    <img src="/imgs/playlist/playlist3.png" alt="Capa Gangsta Rap">
-                </div>
-
-                <!-- Card 4 -->
-                <div class="card-playlist">
-                    <img src="/imgs/playlist/playlist4.png" alt="Capa Best of Taylor Swift">
-                </div>
-
-                <!-- Card 5 -->
-                <div class="card-playlist">
-                    <img src="/imgs/playlist/playlist5.png" alt="Capa Punk Classics">
-                </div>
+                <button class="btn-carrossel btn-next" aria-label="Próximo">❯</button>
             </div>
         </section>
 
-        <!-- FOOTER -->
-
-        <footer class="rodape">
-
-            <div class="rodape-superior">
-                <!-- ícones esquerdos -->
-                <div class="rodape-esquerda">
-
-                    <div class="rodape-icones">
-
-                        <a href="#">
-                            <img src="/imgs/global/instagram.png" alt="Instagram">
-                        </a>
-
-                        <a href="#">
-                            <img src="/imgs/global/fb.png" alt="Facebook">
-                        </a>
-
-                        <a href="#">
-                            <img src="/imgs/global/x.png" alt="Twitter">
-                        </a>
-                    </div>
-                </div>
-
-                <!-- ícones direitos -->
-                <div class="rodape-direita">
-
-                    <div class="rodape-icones">
-
-                        <a href="#">
-                            <img src="/imgs/global/itunes.png" alt="iTunes">
-                        </a>
-
-                        <a href="#">
-                            <img src="/imgs/global/deezer.png" alt="deezer">
-                        </a>
-
-                        <a href="#">
-                            <img src="/imgs/global/youtube.png" alt="Youtube">
-                        </a>
-
-                        <a href="#">
-                            <img src="/imgs/global/spotify.png" alt="Spotify">
-                        </a>
-
-                    </div>
-
-                    <div class="rodape-logo">
-                        <img src="/imgs/global/logofooter.png" alt="MusicHub">
-                    </div>
-                </div>
-            </div>
-
-            <div class="rodape-inferior">
-                <p>
-                    MusicHub © 2026. Todos os direitos reservados.
-                </p>
-
-                <div class="rodape-links">
-
-                    <a href="#">Sobre</a>
-                    <span>|</span>
-                    <a href="#">Notícias</a>
-                    <span>|</span>
-                    <a href="#">Eventos</a>
-                    <span>|</span>
-                    <a href="#">API</a>
-                    <span>|</span>
-                    <a href="#">Contate-nos</a>
-                </div>
-            </div>
-        </footer>
-
     </main>
 
+    <!-- FOOTER -->
+    <footer class="rodape">
+        <div class="rodape-superior">
+            <div class="rodape-esquerda">
+                <div class="rodape-icones">
+                    <a href="#"><img src="/imgs/global/instagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="/imgs/global/fb.png" alt="Facebook"></a>
+                    <a href="#"><img src="/imgs/global/x.png" alt="Twitter"></a>
+                </div>
+            </div>
 
+            <div class="rodape-direita">
+                <div class="rodape-icones">
+                    <a href="#"><img src="/imgs/global/itunes.png" alt="iTunes"></a>
+                    <a href="#"><img src="/imgs/global/deezer.png" alt="deezer"></a>
+                    <a href="#"><img src="/imgs/global/youtube.png" alt="Youtube"></a>
+                    <a href="#"><img src="/imgs/global/spotify.png" alt="Spotify"></a>
+                </div>
+
+                <div class="rodape-logo">
+                    <img src="/imgs/global/logofooter.png" alt="MusicHub">
+                </div>
+            </div>
+        </div>
+
+        <div class="rodape-inferior">
+            <p>MusicHub © 2026. Todos os direitos reservados.</p>
+
+            <div class="rodape-links">
+                <a href="#">Sobre</a>
+                <span>|</span>
+                <a href="#">Notícias</a>
+                <span>|</span>
+                <a href="#">Eventos</a>
+                <span>|</span>
+                <a href="#">API</a>
+                <span>|</span>
+                <a href="#">Contate-nos</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../playlists/playlists.js"></script>
 </body>
 
 </html>

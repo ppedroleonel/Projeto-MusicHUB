@@ -1,57 +1,61 @@
-/* CONTEÚDO PRINCIPAL*/
+/* Estrutura principal */
 
 .conteudo-principal {
-    /* Mantém o mesmo alinhamento lateral do cabeçalho */
-    padding: 40px 120px; 
+    padding: 40px 80px;
     display: flex;
     flex-direction: column;
-
-    gap: 50px; /* Espaço entre as diferentes seções de playlists */
+    gap: 50px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
+.secao-playlists {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Cabecalho secao playlists*/
+
 .cabecalho-secao {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-
-    margin-bottom: 30px;
 }
 
 .titulo-secao {
     font-size: 1.5em;
     font-weight: 500;
-
-    /* A linha amarela de destaque embaixo do texto */
-    border-bottom: 2px solid var(--amarelo-destaque);
+    border-bottom: 2px solid var(--amarelo-destaque, #f1c40f);
     padding-bottom: 8px;
+    white-space: nowrap;
 }
-
-/* BOTÕES ESPECÍFICOS DA PÁGINA */
 
 .botao-criar {
     background: transparent;
     border: 1px solid var(--cor-botao);
-
     color: var(--cor-botao);
-    border-radius: var(--raio-borda);
+    border-radius: var(--raio-borda, 8px);
 
-    padding: 8px 16px;
-
-    font-family: "Moderustic", sans-serif;
-    font-size: 1em;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-
-    transition: background-color 0.2s ease;
+    padding: 6px 16px;
+    font-family: inherit;
+    font-size: 0.85em;
 
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    
+    text-align: left;
+    line-height: 1.2;
+    transition: background-color 0.2s ease;
+    width: 10%
 }
 
 .botao-criar:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(135, 187, 162, 0.15);
 }
 
 .navegacao a.ativo {
@@ -59,44 +63,105 @@
 }
 
 .icone-mais {
-    font-size: 3em; 
+    font-size: 2.8em;
     font-weight: 300;
     line-height: 0;
-    
     transform: translateY(-2px);
 }
 
+/* CARROSSEL E BOTOES LATERAIS */
 
-
-/*CARDS DE PLAYLIST */
-
-.grid-playlists {
-    display: grid;
-    /* Cria 5 colunas de tamanhos iguais */
-    grid-template-columns: repeat(5, 1fr);
-    gap: 30px; 
+.carrossel-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 
+.carrossel-playlists {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 0;
+    
+    
+    scrollbar-width: none; /* Esconder barra de rolagem */
+    -ms-overflow-style: none;
+}
+
+.carrossel-playlists::-webkit-scrollbar {
+    display: none;
+}
+
+.btn-carrossel {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    z-index: 10;
+    
+    background-color: rgba(0, 0, 0, 0.6);
+    color: var(--cor-texto);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.btn-carrossel:hover {
+    background-color: var(--cor-botao);
+    color: #000;
+    border-color: var(--cor-botao);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.btn-prev {
+    left: -20px;
+}
+
+.btn-next {
+    right: -20px;
+}
+
+/* CARDS DE PLAYLIST */
+
 .card-playlist {
+    flex: 0 0 calc((100% - (4 * 30px)) / 5);
+    min-width: 150px;
     display: flex;
     flex-direction: column;
     gap: 12px;
     cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-.card-playlist:hover {
-    transform: scale(1.04);
 }
 
 .card-playlist img {
     width: 100%;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
-    border-radius: var(--raio-borda); 
+    border-radius: var(--raio-borda, 8px);
+    transition: transform 0.2s ease, outline 0.2s ease;
+}
+
+.card-playlist img:hover {
+    transform: scale(1.04);
+    outline: 4px solid var(--cor-botao, #87bba2);
+}
+
+.card-playlist p {
+    font-size: 1.5em;
+    font-weight: 500;
+    line-height: 1.2;
 }
 
 /* FOOTER*/
-/* ========================== */
 
 .rodape {
     width: 100%;
@@ -105,8 +170,7 @@
 
     box-sizing: border-box;
 
-    padding: 24px 30px 12px;
-
+    padding: 40px 120px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -176,5 +240,3 @@
 .rodape-links a {
     text-decoration: none;
 }
-
-
