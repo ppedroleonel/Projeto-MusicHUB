@@ -1,4 +1,5 @@
 /* header */
+
 .cabecalho img {
     margin: 25px;
     width: 169px;
@@ -33,33 +34,24 @@
 .btn-cadastrar:hover,
 .btn-login:hover {
     transform: translateY(-1px);
+    color: var(--cor-texto)
 }
-
-.navegacao > a { 
-    transition: 0.2s;
-}
-
-.navegacao>a:hover {
-    color: var(--cor-botao)
-}
-
-
 
 /* conteudo */
 
- .conteudo {
-    height: 90vh;
+.conteudo {
+    min-height: 90vh;
     
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.login {
+.conteudo-container {
     display: flex;
     flex-direction: column;
     gap: 50px;
-} 
+}
 
 .campo {
     display: flex;
@@ -130,29 +122,28 @@ input {
     display: block;
 }
 
-
 .redefinir {
     display: flex;
     gap: 10px;
 }
 
-.redefinir > span {
+.redefinir>span {
     font-weight: 700;
     color: var(--cinza-detalhes);
 }
 
-.redefinir > a:hover {
+.redefinir>a:hover {
     color: var(--cor-botao);
     cursor: pointer;
 }
 
-/* BOTÃO ENTRAR */
+/* botao de enviar cadastro e entrar */
 
-#btn-entrar {
+#btn-enviar {
     border-radius: 30px;
     border: none;
     padding: 20px 200px;
-    
+
     background-color: var(--cinza-detalhes);
     color: var(--cor-fundo);
 
@@ -165,14 +156,12 @@ input {
     transition: transform 0.2s;
 }
 
-#btn-entrar:hover {
+#btn-enviar:hover {
     background-color: var(--cor-botao);
     cursor: pointer;
 
     transform: translateY(-3px);
 }
-
-
 
 /* RESPONSIVIDADE */
 
