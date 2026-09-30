@@ -54,6 +54,10 @@
     background-color: rgba(255, 255, 255, 0.1);
 }
 
+.navegacao a.ativo {
+    color: #87BBA2;
+}
+
 .icone-mais {
     font-size: 3em; 
     font-weight: 300;
