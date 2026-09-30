@@ -12,18 +12,22 @@
 }
 
 .foto-de-perfil {
+    position: absolute;
+    top: 140px;
+    left: 40px;
     width: 180px;
     height: 180px;
-    display: flex;
-    align-items: flex-end;
-    gap: 15px;
-    margin-top: -100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--laranja-destaque);
+    z-index: 2;
 }
 
 .foto-de-perfil img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 .info-perfil {
@@ -35,7 +39,9 @@
 
 .info-esquerda {
     display: flex;
+    align-items: flex-end;
     gap: 20px;
+    padding-left: 200px;
 }
 
 .info-direita {
@@ -70,7 +76,7 @@
 }
  
 .faixas-recentes h1 {
-    font-size: 2.2em;
+    font-size: 2.5em;
 }
 
 .lista-musica {
@@ -149,46 +155,54 @@
 }
 
 /* favoritas */
-
+ 
 .favoritas {
     padding: 0px 70px;
     font-size: 1.2em;
 }
-
+ 
 .favoritas p {
     color: var(--laranja-destaque);
 }
-
+ 
 .playlists {
     padding: 15px 30px;
     display: flex;
     justify-content: space-between;
+    max-width: 1500px;
+    margin: 0 auto;
 }
-
+ 
 .playlists img {
     height: 220px;
+    width: 180px;
 }
-
+ 
 .artistas {
     padding: 15px 30px;
     display: flex;
     justify-content: space-between;
+    max-width: 1500px;
+    margin: 0 auto;
 }
-
+ 
 .artistas img {
     height: 220px;
+    width: 180px;
 }
+ 
 
 /* AVALIAÇÕES */
- 
+
 .avaliacoes {
     padding: 35px 70px 60px;
 }
- 
+
 .avaliacoes h1 {
     font-size: 2.2em;
+    margin-bottom: 25px;
 }
- 
+
 .avaliacoe {
     display: flex;
     align-items: flex-start;
@@ -197,7 +211,7 @@
     margin: 0 auto;
     padding: 25px 0;
 }
- 
+
 .avaliacoe > img {
     width: 170px;
     height: 170px;
@@ -205,7 +219,7 @@
     object-fit: cover;
     flex-shrink: 0;
 }
- 
+
 .review {
     display: flex;
     flex-direction: column;
@@ -213,29 +227,30 @@
     flex: 1;
     justify-content: center;
 }
- 
+
 .review-info {
     display: flex;
     align-items: center;
     gap: 22px;
 }
- 
+
 .review-info h1 {
     font-size: 2.2em;
 }
- 
+
 .review-info img {
     width: 38px;
     height: 38px;
 }
- 
+
 .comentario p {
     color: #ffffff;
     font-size: 1.4em;
     line-height: 1.6;
     max-width: 950px;
 }
- 
+
+
 .review .musica {
     padding: 10px 0;
     max-width: 600px;
