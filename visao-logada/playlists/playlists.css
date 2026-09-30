@@ -63,11 +63,12 @@
 }
 
 .icone-mais {
-    font-size: 2.8em;
+    font-size: 3em; 
     font-weight: 300;
     line-height: 0;
     transform: translateY(-2px);
 }
+
 
 /* CARROSSEL E BOTOES LATERAIS */
 
@@ -126,6 +127,11 @@
 .btn-prev {
     left: -20px;
 }
+
+.navegacao a.ativo {
+    color: #87BBA2;
+}
+
 
 .btn-next {
     right: -20px;
