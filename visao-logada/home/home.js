@@ -1,3 +1,39 @@
+// PERFIL BTN
+const botaoPerfil = document.getElementById('botao-perfil');
+const menuPerfil  = document.getElementById('menu-perfil');
+
+function abrirMenu() {
+    menuPerfil.hidden = false;
+    // espera 1 frame para a transição de opacidade funcionar
+    requestAnimationFrame(() => menuPerfil.classList.add('aberto'));
+    botaoPerfil.setAttribute('aria-expanded', 'true');
+}
+
+function fecharMenu() {
+    menuPerfil.classList.remove('aberto');
+    botaoPerfil.setAttribute('aria-expanded', 'false');
+    // só esconde de vez depois da animação terminar
+    setTimeout(() => {
+        if (!menuPerfil.classList.contains('aberto')) menuPerfil.hidden = true;
+    }, 200);
+}
+
+botaoPerfil.addEventListener('click', (e) => {
+    e.stopPropagation();
+    menuPerfil.classList.contains('aberto') ? fecharMenu() : abrirMenu();
+});
+
+// Clicar fora fecha
+document.addEventListener('click', (e) => {
+    if (!menuPerfil.contains(e.target)) fecharMenu();
+});
+
+// Esc fecha
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') fecharMenu();
+});
+
+// CARDS
 document.querySelectorAll('.carrossel-container').forEach((carrossel) => {
     let apertado = false;
     let arrastou = false;

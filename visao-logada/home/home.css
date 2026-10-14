@@ -10,6 +10,126 @@ color: var(--cor-botao);
     max-width: 100%;
 }
 
+/* BUSCA EXPANSÍVEL */
+.busca {
+    display: flex;
+    align-items: center;
+    height: 42px;
+    border-radius: 999px;
+    background: transparent;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.busca-input {
+    width: 0;                      /* recolhido */
+    padding: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--cor-texto);
+    font-family: inherit;
+    font-size: 1.1rem;
+    font-weight: 500;
+    opacity: 0;
+    transition: width 0.35s ease, padding 0.35s ease, opacity 0.25s ease;
+}
+
+.busca-input::placeholder {
+    color: var(--cor-texto);
+    opacity: 0.9;
+}
+
+/* Tira o "x" nativo do input type=search */
+.busca-input::-webkit-search-cancel-button { display: none; }
+
+/* --- ESTADO ABERTO --- */
+.busca.aberta {
+    background: rgba(245, 245, 245, 0.18);   /* cinza translúcido do print */
+}
+
+.busca.aberta .busca-input {
+    width: 340px;
+    padding: 0 12px 0 24px;
+    opacity: 1;
+}
+
+.busca.aberta .botao-busca {
+    background: rgba(245, 245, 245, 0.2);
+    border-radius: 50%;
+}
+
+/* Wrapper: referência de posição do pop-up */
+.perfil-wrapper {
+    position: relative;
+}
+
+.perfil {
+    background: transparent;
+    border: none;
+    color: var(--cor-texto);
+    font-family: inherit;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+/* --- POP-UP --- */
+.menu-perfil {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    width: 260px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    background: var(--cor-fundo);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+
+    /* animação de entrada */
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.menu-perfil.aberto {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+
+/* o atributo hidden só some depois da animação (controlado pelo JS) */
+.menu-perfil[hidden] {
+    display: none;
+}
+
+/* --- ITENS --- */
+.item-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--cor-fundo);
+    transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.item-menu:hover {
+    filter: brightness(1.08);
+    transform: translateX(2px);
+}
+
+.item-claro { background: var(--cinza-detalhes); }   /* verde-claro do Figma */
+.item-sair  { background: #FF7F66; }                 /* laranja/salmão do botão Sair */
+
+.item-menu i { font-size: 0.75rem; }
+
 /* banner principal*/
 .banner-topo {
     width: 100%;
