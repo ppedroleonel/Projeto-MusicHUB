@@ -14,7 +14,17 @@ btnSenha.addEventListener("click", function ()
     }*/
 
         // o tipo do campoSenha é um password, se sim recebe texto se nao recebe password.
+    const mostrar = campoSenha.type === "password"
     campoSenha.type = campoSenha.type == "password" ? "text" : "password";
-
+    btnSenha.classList.toggle("visivel", mostrar);
   }
 )
+
+const menu = document.getElementById("menu");
+const navegacao = document.querySelector(".navegacao");
+const cabecalho = document.querySelector(".cabecalho");
+
+menu.addEventListener("click", () => {
+    navegacao.classList.toggle("ativo");
+    cabecalho.classList.toggle("remover-border-cabecalho")
+});

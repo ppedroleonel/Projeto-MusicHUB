@@ -17,6 +17,18 @@ padding: 0;
 
 }
 
+/*  */
+body {
+    background: #191B32;
+    color: #ffffff;
+    font-family: "Moderustic", sans-serif;
+}
+
+button,
+a {
+    font-family: inherit;
+}
+
 /* Variáveis do Design System */
 
 :root {
